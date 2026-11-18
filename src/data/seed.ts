@@ -1,7 +1,7 @@
 // Seed data — generated from ~/workspace/your_files/repo-kit/data/*.json
-// 77 repos. Every repo starts with dateInstalled 2026-09-19 (the VAULT.md
-// batch dates). The app stores its own copy in AsyncStorage on first launch;
-// edits never touch this file.
+// 79 repos. The original 77 start with dateInstalled 2026-09-19 (the VAULT.md
+// batch dates); repo-078 and repo-079 were added 2026-11-18. The app stores its
+// own copy in AsyncStorage on first launch; edits never touch this file.
 
 export type RepoStatus = 'FORGE-INSTALLED' | 'LATER' | 'VAULT-ONLY' | 'UNRESOLVED';
 
@@ -23,6 +23,7 @@ export const SEED_CATEGORIES: Category[] = [
   { id: "agent", name: "Agent" },
   { id: "audio", name: "Audio" },
   { id: "harness", name: "Harness" },
+  { id: "laptop", name: "My Laptop" },
   { id: "os", name: "OS" },
   { id: "uncategorized", name: "Uncategorized" },
   { id: "video", name: "Video" },
@@ -876,5 +877,27 @@ export const SEED_REPOS: Repo[] = [
     stars: null,
     category: "web",
     dateInstalled: "2026-09-19",
+  },
+  {
+    id: "repo-078",
+    name: "ag-ui-protocol/ag-ui",
+    url: "https://github.com/ag-ui-protocol/ag-ui",
+    description: "Agent-User Interaction Protocol \u2014 one uniform coupling between agents and any app layer (rooms UI, game room); v1.0 frozen spec, TS/Python/.NET SDKs",
+    note: "Uniform coupling for the second layer \u2014 pull it out when the Godot game room (or any other layer) shows up. Not now: one brain family, nothing to standardize between yet.",
+    status: "LATER",
+    stars: 20297,
+    category: "harness",
+    dateInstalled: "2026-11-18",
+  },
+  {
+    id: "repo-079",
+    name: "noblehacks/frenemy",
+    url: "https://github.com/noblehacks/frenemy",
+    description: "Makes Claude Code, Codex, Gemini and Kimi Code talk to each other \u2014 any one drives, hands work to the others; no API keys, runs on subscriptions",
+    note: "Desktop-only: needs 2+ of the four CLIs + VS Code. None of the four are our brains, so it can't connect our agents. Filed for the laptop.",
+    status: "LATER",
+    stars: 91,
+    category: "laptop",
+    dateInstalled: "2026-11-18",
   },
 ];
