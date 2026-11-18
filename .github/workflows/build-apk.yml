@@ -18,9 +18,9 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
-
-      - name: Set up JDK 17
+        run: npm ci --legacy-peer-deps                                                                   
+ 
+      - name: Set upDK 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -38,3 +38,4 @@ jobs:
           name: repo-vault-debug-apk
           path: android/app/build/outputs/apk/debug/*.apk
           retention-days: 30
+       
